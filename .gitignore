@@ -1,0 +1,36 @@
+# Arduino / ESP32 build artifacts
+build/
+bin/
+obj/
+out/
+*.bin
+*.elf
+*.hex
+*.map
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.log
+*.tmp
+
+# IDE/editor state
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Dependency/cache folders
+node_modules/
+__pycache__/
+.venv/
+venv/
+.terraform/
+*.tfstate*
+
+# Environment and local config
+.env*
+*.local

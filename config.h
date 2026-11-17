@@ -1,0 +1,28 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#include <Arduino.h>
+
+#define WIFI_SSID "ESP32_OT_LAN"
+#define WIFI_PASSWORD "password123"
+#define KEP_SERVER_HOST "192.168.1.20"
+#define KEP_SERVER_PORT 8080
+#define KEP_SERVER_ENDPOINT "/api/telemetry"
+
+#define I2C_SDA_PIN 21
+#define I2C_SCL_PIN 22
+#define SHT31_I2C_ADDRESS 0x44
+#define WIFI_LED_PIN 25
+#define SERVER_LED_PIN 26
+
+#define SERIAL_BAUD 115200
+#define SAMPLE_INTERVAL_MS 5000UL
+#define TELEMETRY_POST_INTERVAL_MS 5000UL
+#define WIFI_RETRY_INTERVAL_MS 5000UL
+#define SERVER_RETRY_INTERVAL_MS 5000UL
+#define HTTP_TIMEOUT_MS 5000
+
+#define TAG_TEMPERATURE "Tag_Nhiet_Do"
+#define TAG_HUMIDITY "Tag_Do_Am"
+
+#endif
