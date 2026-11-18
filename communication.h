@@ -25,6 +25,7 @@ struct NetworkState {
 
 void communicationSetup();
 void communicationLoop();
+bool isWifiConnected();
 void ensureConnection();
 bool tryPostTelemetry(const char* payload);
 const char* wifiStateToString(WifiState state);

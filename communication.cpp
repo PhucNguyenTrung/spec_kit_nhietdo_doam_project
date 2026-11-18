@@ -64,6 +64,10 @@ void communicationLoop() {
   updateWifiState();
 }
 
+bool isWifiConnected() {
+  return WiFi.status() == WL_CONNECTED;
+}
+
 void ensureConnection() {
   if (WiFi.status() != WL_CONNECTED) {
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);

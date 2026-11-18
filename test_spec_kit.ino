@@ -41,7 +41,7 @@ void loop() {
                "[{\"id\":\"%s\",\"v\":%.2f},{\"id\":\"%s\",\"v\":%.2f}]",
                TAG_TEMPERATURE, data.temperatureC, TAG_HUMIDITY, data.humidityRH);
 
-      if (WiFi.status() == WL_CONNECTED) {
+      if (isWifiConnected()) {
         bool sent = tryPostTelemetry(telemetryPayload);
         if (sent) {
           diagPrintInfo("Dữ liệu gửi lên KEPServerEX thành công");
@@ -67,13 +67,13 @@ void loop() {
     diagPrintStatus(wifiState, serverState, state.ipAddress, state.rssiDbm, lastTelemetry.temperatureC, lastTelemetry.humidityRH, lastTelemetry.valid);
   }
 
-  if (WiFi.status() == WL_CONNECTED) {
+  if (isWifiConnected()) {
     updateWifiLed(true, false);
   } else {
     updateWifiLed(false, true);
   }
 
-  if (WiFi.status() != WL_CONNECTED) {
+  if (!isWifiConnected()) {
     ensureConnection();
   }
 }

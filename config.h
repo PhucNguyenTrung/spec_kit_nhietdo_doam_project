@@ -3,8 +3,8 @@
 
 #include <Arduino.h>
 
-#define WIFI_SSID "ESP32_OT_LAN"
-#define WIFI_PASSWORD "password123"
+#define WIFI_SSID "Phuc Nguyen"
+#define WIFI_PASSWORD "1234567899"
 #define KEP_SERVER_HOST "192.168.1.20"
 #define KEP_SERVER_PORT 8080
 #define KEP_SERVER_ENDPOINT "/api/telemetry"
